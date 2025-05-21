@@ -120,6 +120,7 @@
 				300A6C8F2DDD701A00F93806 /* Application */,
 				300A6C902DDD702F00F93806 /* Resources */,
 				300A6C912DDD705000F93806 /* Features */,
+				300A6CA82DDD7FDA00F93806 /* Network */,
 			);
 			path = MeliChallengeiOS;
 			sourceTree = "<group>";
@@ -195,6 +196,21 @@
 				300A6C9E2DDD70D100F93806 /* SearchViewModel.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		300A6CA82DDD7FDA00F93806 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				300A6CA92DDD7FEA00F93806 /* APIs */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		300A6CA92DDD7FEA00F93806 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
