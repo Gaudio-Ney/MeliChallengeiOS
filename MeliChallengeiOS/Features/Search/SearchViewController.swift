@@ -1,12 +1,35 @@
-import UIKit
 import SnapKit
+import UIKit
 
 final class SearchViewController: UIViewController {
     // MARK: - Properties
-    private lazy var extempleView: UIView = {
-        $0.backgroundColor = .red
+    private lazy var mainVerticalStack: UIStackView = {
+        $0.axis = .vertical
+        $0.spacing = 16
         return $0
-    }(UIView())
+    }(UIStackView())
+
+    private lazy var appLogoImageView: UIImageView = {
+        $0.image = UIImage(named: "LogoMeli")
+        $0.contentMode = .scaleAspectFit
+        return $0
+    }(UIImageView())
+    
+    private lazy var searchBar: UISearchBar = {
+        $0.delegate = self
+        $0.barTintColor = .mainYellow
+        return $0
+    }(UISearchBar())
+
+    private lazy var searchButton: UIButton = {
+        $0.setTitle("Pesquisar", for: .normal)
+        $0.setTitleColor(.backgroundWhite, for: .normal)
+        $0.backgroundColor = .mainBlue
+        $0.layer.cornerRadius = 4
+        $0.layer.masksToBounds = true
+        return $0
+    }(UIButton())
+
     // MARK: - Initializers
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -37,16 +60,37 @@ private extension SearchViewController {
     }
 
     func buildViewHierarchy() {
-        view.addSubview(extempleView)
+        view.addSubview(mainVerticalStack)
+        mainVerticalStack.addArrangedSubview(appLogoImageView)
+        mainVerticalStack.addArrangedSubview(searchBar)
+        mainVerticalStack.addArrangedSubview(searchButton)
     }
 
     func setupConstraints() {
-        extempleView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        mainVerticalStack.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(200)
+            $0.leading.equalToSuperview().offset(16)
+            $0.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(200)
+        }
+
+        appLogoImageView.snp.makeConstraints {
+            $0.width.equalTo(150)
+        }
+
+        searchButton.snp.makeConstraints { 
+            $0.width.equalTo(mainVerticalStack.snp.width)
+            $0.height.equalTo(45)
         }
     }
 
     func additionalConfigurations() {
-        view.backgroundColor = .green
+        view.backgroundColor = .mainYellow
+        title = "Busca de Produtos"
     }
+}
+
+// MARK: - UISearchBarDelegate
+extension SearchViewController: UISearchBarDelegate {
+    
 }
