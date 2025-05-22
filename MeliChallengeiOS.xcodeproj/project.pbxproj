@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		300A6C5D2DDD6FAF00F93806 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C5C2DDD6FAF00F93806 /* AppDelegate.swift */; };
 		300A6C5F2DDD6FAF00F93806 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C5E2DDD6FAF00F93806 /* SceneDelegate.swift */; };
-		300A6C642DDD6FAF00F93806 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300A6C622DDD6FAF00F93806 /* Main.storyboard */; };
 		300A6C672DDD6FAF00F93806 /* MeliChallengeiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C652DDD6FAF00F93806 /* MeliChallengeiOS.xcdatamodeld */; };
 		300A6C692DDD6FAF00F93806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300A6C682DDD6FAF00F93806 /* Assets.xcassets */; };
 		300A6C772DDD6FB000F93806 /* MeliChallengeiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C762DDD6FB000F93806 /* MeliChallengeiOSTests.swift */; };
@@ -24,6 +23,11 @@
 		300A6CA32DDD710B00F93806 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6CA22DDD710B00F93806 /* ProductDetailViewModel.swift */; };
 		300A6CA52DDD711F00F93806 /* ProductDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6CA42DDD711F00F93806 /* ProductDetailFactory.swift */; };
 		300A6CA72DDD713B00F93806 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6CA62DDD713B00F93806 /* MainNavigationController.swift */; };
+		30BFFE7D2DDFCBFA0045AFC1 /* SearchNickNameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFE7C2DDFCBFA0045AFC1 /* SearchNickNameResponse.swift */; };
+		30BFFE7F2DDFCDE80045AFC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFE7E2DDFCDE80045AFC1 /* Constants.swift */; };
+		30BFFE822DDFD1080045AFC1 /* SearchStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFE812DDFD1080045AFC1 /* SearchStrings.swift */; };
+		30BFFE872DDFD3830045AFC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30BFFE892DDFD3830045AFC1 /* Localizable.strings */; };
+		30BFFE8D2DDFD7470045AFC1 /* ImageResource+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFE8C2DDFD7470045AFC1 /* ImageResource+UIImage.swift */; };
 		30E62B422DDE9E2500DFD53F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E62B412DDE9E2500DFD53F /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +52,6 @@
 		300A6C592DDD6FAF00F93806 /* MeliChallengeiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliChallengeiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		300A6C5C2DDD6FAF00F93806 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		300A6C5E2DDD6FAF00F93806 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		300A6C632DDD6FAF00F93806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		300A6C662DDD6FAF00F93806 /* MeliChallengeiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeliChallengeiOS.xcdatamodel; sourceTree = "<group>"; };
 		300A6C682DDD6FAF00F93806 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300A6C6D2DDD6FAF00F93806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +67,13 @@
 		300A6CA22DDD710B00F93806 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		300A6CA42DDD711F00F93806 /* ProductDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailFactory.swift; sourceTree = "<group>"; };
 		300A6CA62DDD713B00F93806 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		30BFFE7C2DDFCBFA0045AFC1 /* SearchNickNameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNickNameResponse.swift; sourceTree = "<group>"; };
+		30BFFE7E2DDFCDE80045AFC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30BFFE812DDFD1080045AFC1 /* SearchStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStrings.swift; sourceTree = "<group>"; };
+		30BFFE882DDFD3830045AFC1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		30BFFE8A2DDFD3F60045AFC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		30BFFE8B2DDFD3F70045AFC1 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		30BFFE8C2DDFD7470045AFC1 /* ImageResource+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageResource+UIImage.swift"; sourceTree = "<group>"; };
 		30E62B412DDE9E2500DFD53F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +130,7 @@
 				300A6C6D2DDD6FAF00F93806 /* Info.plist */,
 				300A6C652DDD6FAF00F93806 /* MeliChallengeiOS.xcdatamodeld */,
 				300A6C8F2DDD701A00F93806 /* Application */,
+				30BFFE802DDFD0E70045AFC1 /* Localizables */,
 				300A6C902DDD702F00F93806 /* Resources */,
 				300A6C912DDD705000F93806 /* Features */,
 				300A6CA82DDD7FDA00F93806 /* Network */,
@@ -156,8 +167,9 @@
 		300A6C902DDD702F00F93806 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				300A6C622DDD6FAF00F93806 /* Main.storyboard */,
 				300A6C682DDD6FAF00F93806 /* Assets.xcassets */,
+				30BFFE7E2DDFCDE80045AFC1 /* Constants.swift */,
+				30BFFE8C2DDFD7470045AFC1 /* ImageResource+UIImage.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -203,6 +215,7 @@
 		300A6CA82DDD7FDA00F93806 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				30BFFE7B2DDFCBE10045AFC1 /* Responses */,
 				30E62B432DDE9E2D00DFD53F /* Manager */,
 				300A6CA92DDD7FEA00F93806 /* APIs */,
 			);
@@ -214,6 +227,23 @@
 			children = (
 			);
 			path = APIs;
+			sourceTree = "<group>";
+		};
+		30BFFE7B2DDFCBE10045AFC1 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				30BFFE7C2DDFCBFA0045AFC1 /* SearchNickNameResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		30BFFE802DDFD0E70045AFC1 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				30BFFE812DDFD1080045AFC1 /* SearchStrings.swift */,
+				30BFFE892DDFD3830045AFC1 /* Localizable.strings */,
+			);
+			path = Localizables;
 			sourceTree = "<group>";
 		};
 		30E62B432DDE9E2D00DFD53F /* Manager */ = {
@@ -309,11 +339,13 @@
 			};
 			buildConfigurationList = 300A6C542DDD6FAF00F93806 /* Build configuration list for PBXProject "MeliChallengeiOS" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				"es-419",
 			);
 			mainGroup = 300A6C502DDD6FAF00F93806;
 			packageReferences = (
@@ -336,7 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				300A6C692DDD6FAF00F93806 /* Assets.xcassets in Resources */,
-				300A6C642DDD6FAF00F93806 /* Main.storyboard in Resources */,
+				30BFFE872DDFD3830045AFC1 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,16 +393,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BFFE822DDFD1080045AFC1 /* SearchStrings.swift in Sources */,
 				300A6C962DDD708400F93806 /* SearchViewController.swift in Sources */,
 				300A6C9F2DDD70D100F93806 /* SearchViewModel.swift in Sources */,
+				30BFFE8D2DDFD7470045AFC1 /* ImageResource+UIImage.swift in Sources */,
 				300A6CA72DDD713B00F93806 /* MainNavigationController.swift in Sources */,
 				300A6C5D2DDD6FAF00F93806 /* AppDelegate.swift in Sources */,
 				30E62B422DDE9E2500DFD53F /* NetworkManager.swift in Sources */,
 				300A6C672DDD6FAF00F93806 /* MeliChallengeiOS.xcdatamodeld in Sources */,
 				300A6CA52DDD711F00F93806 /* ProductDetailFactory.swift in Sources */,
+				30BFFE7F2DDFCDE80045AFC1 /* Constants.swift in Sources */,
 				300A6CA12DDD70EA00F93806 /* ProductDetailViewController.swift in Sources */,
 				300A6C9D2DDD70BB00F93806 /* SearchFactory.swift in Sources */,
 				300A6C5F2DDD6FAF00F93806 /* SceneDelegate.swift in Sources */,
+				30BFFE7D2DDFCBFA0045AFC1 /* SearchNickNameResponse.swift in Sources */,
 				300A6CA32DDD710B00F93806 /* ProductDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,12 +444,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		300A6C622DDD6FAF00F93806 /* Main.storyboard */ = {
+		30BFFE892DDFD3830045AFC1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				300A6C632DDD6FAF00F93806 /* Base */,
+				30BFFE882DDFD3830045AFC1 /* pt-BR */,
+				30BFFE8A2DDFD3F60045AFC1 /* en */,
+				30BFFE8B2DDFD3F70045AFC1 /* es-419 */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -471,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -528,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -549,8 +587,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeliChallengeiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -578,8 +615,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeliChallengeiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

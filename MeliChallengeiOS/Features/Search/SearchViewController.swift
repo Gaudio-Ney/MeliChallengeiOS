@@ -3,6 +3,8 @@ import UIKit
 
 final class SearchViewController: UIViewController {
     // MARK: - Properties
+
+    // MARK: - View Components
     private lazy var mainVerticalStack: UIStackView = {
         $0.axis = .vertical
         $0.spacing = 16
@@ -10,11 +12,11 @@ final class SearchViewController: UIViewController {
     }(UIStackView())
 
     private lazy var appLogoImageView: UIImageView = {
-        $0.image = UIImage(named: "LogoMeli")
+        $0.image = .meliLogoImage
         $0.contentMode = .scaleAspectFit
         return $0
     }(UIImageView())
-    
+
     private lazy var searchBar: UISearchBar = {
         $0.delegate = self
         $0.barTintColor = .mainYellow
@@ -22,7 +24,7 @@ final class SearchViewController: UIViewController {
     }(UISearchBar())
 
     private lazy var searchButton: UIButton = {
-        $0.setTitle("Pesquisar", for: .normal)
+        $0.setTitle(SearchStrings.searchButtonTitle.localized, for: .normal)
         $0.setTitleColor(.backgroundWhite, for: .normal)
         $0.backgroundColor = .mainBlue
         $0.layer.cornerRadius = 4
@@ -86,7 +88,7 @@ private extension SearchViewController {
 
     func additionalConfigurations() {
         view.backgroundColor = .mainYellow
-        title = "Busca de Produtos"
+        title = SearchStrings.searchNavigationBarTitle.localized
     }
 }
 

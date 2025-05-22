@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  MeliChallengeiOS
+
+  Created by Gáudio Ney on 22/05/25.
+  
+*/
+
+// MARK: - SearchStrings
+"SearchStrings_searchButtonTitle" = "Buscar";
+"SearchStrings_searchNavigationBarTitle" = "Busca de Produtos";
