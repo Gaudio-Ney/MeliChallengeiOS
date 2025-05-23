@@ -6,7 +6,8 @@ struct SearchFactory {
         let baseURL = URL(string: Constants.BaseApiUrl.kBaseMeliURL)!
         let networkService = NetworkService(baseURL: baseURL)
         let searchManager = SearchManager(networkService: networkService)
-        let viewController = SearchViewController()
+        let viewModel = SearchViewModel(searchManager: searchManager)
+        let viewController = SearchViewController(viewModel: viewModel)
         return viewController
     }
 }

@@ -1,8 +1,12 @@
 import Foundation
 
 struct SearchNickNameResponse: Decodable {
-    let name: String?
-    let price: Double?
-    let description: String?
-    let imageURL: String?
+    let domainID, domainName, categoryID, categoryName: String?
+
+    enum CodingKeys: String, CodingKey {
+        case domainID = "domain_id"
+        case domainName = "domain_name"
+        case categoryID = "category_id"
+        case categoryName = "category_name"
+    }
 }

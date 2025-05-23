@@ -1,11 +1,12 @@
 import Foundation
 
 protocol SearchViewModelProtocol: AnyObject {
-    func getSearch(inputValue: String)
+    var delegate: SearchViewModelDelegate? { get set }
+    func getSearch(inputValue: String?)
 }
 
 protocol SearchViewModelDelegate: AnyObject {
-
+    func showError()
 }
 
 final class SearchViewModel: SearchViewModelProtocol {
@@ -18,7 +19,11 @@ final class SearchViewModel: SearchViewModelProtocol {
         self.searchManager = searchManager
     }
 
-    func getSearch(inputValue: String) {
+    func getSearch(inputValue: String?) {
+        guard let inputValue else {
+            delegate?.showError()
+            return
+        }
         search(nickname: inputValue)
     }
 }

@@ -3,6 +3,7 @@ import UIKit
 
 final class SearchViewController: UIViewController {
     // MARK: - Properties
+    let viewModel: SearchViewModelProtocol
 
     // MARK: - View Components
     private lazy var mainVerticalStack: UIStackView = {
@@ -17,24 +18,18 @@ final class SearchViewController: UIViewController {
         return $0
     }(UIImageView())
 
-    private lazy var flexibleSpacer: UIBarButtonItem = {
-        return $0
-    }(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil))
-
     private lazy var doneButton: UIBarButtonItem = {
         return $0
     }(UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapToolbarDoneButton)))
 
-    private lazy var toolbar: UIToolbar = {
-        $0.items = [flexibleSpacer, doneButton]
-        $0.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-        $0.sizeToFit()
+    private lazy var toolbarView: UIToolbar = {
+        $0.items?.append(doneButton)
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIToolbar())
 
     private lazy var searchBarTextField: SearchTextField = {
         $0.delegate = self
-        $0.inputAccessoryView = toolbar
         $0.layer.cornerRadius = 4
         $0.layer.masksToBounds = true
         $0.layer.borderWidth = 1
@@ -58,8 +53,10 @@ final class SearchViewController: UIViewController {
     }(UIButton())
 
     // MARK: - Initializers
-    init() {
+    init(viewModel: SearchViewModelProtocol) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
     }
 
     required init?(coder: NSCoder) {
@@ -91,6 +88,7 @@ private extension SearchViewController {
         mainVerticalStack.addArrangedSubview(appLogoImageView)
         mainVerticalStack.addArrangedSubview(searchBarTextField)
         mainVerticalStack.addArrangedSubview(searchButton)
+        view.addSubview(toolbarView)
     }
 
     func setupConstraints() {
@@ -108,6 +106,13 @@ private extension SearchViewController {
         searchButton.snp.makeConstraints { 
             $0.width.equalTo(mainVerticalStack.snp.width)
             $0.height.equalTo(45)
+        }
+
+        toolbarView.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+            $0.height.equalTo(44)
         }
     }
 
@@ -128,6 +133,7 @@ private extension SearchViewController {
     // MARK: - Objetive-C Methods
     @objc
     func didTapSearchButton() {
+        viewModel.getSearch(inputValue: searchBarTextField.text?.lowercased())
         let viewController = ListingProductsFactory.makeSearchViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
@@ -135,6 +141,13 @@ private extension SearchViewController {
     @objc
     func didTapToolbarDoneButton() {
         searchBarTextField.resignFirstResponder()
+    }
+}
+
+// MARK: - SearchViewModelDelegate
+extension SearchViewController: SearchViewModelDelegate {
+    func showError() {
+        UIAlert.showAlert(on: self, title: "Campo de busca faltante", message: "Preencha o campo de texto com o produto que deseja procurar.")
     }
 }
 

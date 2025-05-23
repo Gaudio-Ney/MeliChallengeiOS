@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>15.0.0</string>
+	<string>16.0.0</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

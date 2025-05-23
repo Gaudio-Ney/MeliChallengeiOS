@@ -3,11 +3,14 @@ import Foundation
 struct SearchNickNameRequest: NetworkRequest {
     typealias Response = SearchNickNameResponse
 
-    var path: String { "auth/login" }
-    var method: String { "POST" }
-    var headers: [String : String]? { ["Content-Type": "application/json"] }
+    var path: String { "sites/MLB/domain_discovery/search" }
+    var method: String { "GET" }
+    var parameters: [String : Any] {
+        ["q" : nickname]
+    }
+    var headers: [String : String]? { nil }
     var body: Data? {
-        try? JSONEncoder().encode(["nickname": nickname])
+        nil
     }
 
     let nickname: String

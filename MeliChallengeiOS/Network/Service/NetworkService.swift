@@ -1,9 +1,37 @@
 import Foundation
 
+enum APIError: Error {
+    case urlError
+    case notFound
+    case badRequest
+    case serverError
+    case noDataError
+    case unknownError
+
+    var errorDescription: String {
+        switch self {
+        case .urlError:
+            return "Não foi possível criar o objeto URL a partir da string fornecida."
+        case .notFound:
+            return "Erro 404, serviço não encontrado."
+        case .badRequest:
+            return "Erro ao enviar os dados para o Servidor."
+        case .serverError:
+            return "Erro Interno do Servidor."
+        case .noDataError:
+            return "Nenhum dado enviado pelo Servidor."
+        case .unknownError:
+            return "Algo de errado aconteceu."
+        }
+    }
+}
+
 final class NetworkService {
     // MARK: - Properties
     private let baseURL: URL
     private let session: URLSession
+
+    private let consoleLogger = ConsoleNetworkLogger()
 
     // MARK: - Initializer
     init(baseURL: URL, session: URLSession = .shared) {
@@ -16,13 +44,27 @@ final class NetworkService {
         _ request: T,
         completion: @escaping (Result<T.Response, Error>) -> Void
     ) {
-        let fullURL = baseURL.appendingPathComponent(request.path)
+        var fullURL = baseURL.appendingPathComponent(request.path)
+        var components = URLComponents(string: fullURL.absoluteString)!
+        components.queryItems = request.parameters.map { (key, value) in
+            URLQueryItem(name: key, value: value as? String)
+        }
+
+        fullURL = fullURL.appending(queryItems: components.queryItems!)
+
+        guard let url = components.url else {
+            return completion(.failure(APIError.urlError))
+        }
+
         var urlRequest = URLRequest(url: fullURL)
+        urlRequest = Interceptor.attachHeaders(to: urlRequest)
         urlRequest.httpMethod = request.method
         urlRequest.allHTTPHeaderFields = request.headers
         urlRequest.httpBody = request.body
+        consoleLogger.logRequest(urlRequest)
 
         let task = session.dataTask(with: urlRequest) { data, response, error in
+            self.consoleLogger.logResponse(data: data, response: response, error: error)
             if let error = error {
                 return completion(.failure(error))
             }
