@@ -1,6 +1,6 @@
 import Foundation
 
-struct SearchNickNameResponse {
+struct SearchNickNameResponse: Decodable {
     let name: String?
     let price: Double?
     let description: String?

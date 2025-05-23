@@ -3,4 +3,117 @@
    uuid = "90E92A12-76F8-4CE3-94E5-62006BD8C718"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F73C02A-29E0-40F1-9D66-ADFA398B216D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOS/Features/Search/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "textFieldDidBeginEditing(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5F73C02A-29E0-40F1-9D66-ADFA398B216D - 6bcbf36df2d8b9ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOS.SearchViewController.textFieldDidBeginEditing(__C.UITextField) -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "5F73C02A-29E0-40F1-9D66-ADFA398B216D - 6bcbf36df2d8b9ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOS.SearchViewController.textFieldDidBeginEditing(__C.UITextField) -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "5F73C02A-29E0-40F1-9D66-ADFA398B216D - 6bcbf36df2d8bb6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOS.SearchViewController.textFieldDidBeginEditing(__C.UITextField) -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0ABCF72C-D80E-4F65-9866-26C6A1EEFB3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOS/Features/Search/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "didTapSearchButton()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0ABCF72C-D80E-4F65-9866-26C6A1EEFB3E - ed1c6fd86038ae83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOS.SearchViewController.didTapSearchButton() -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "0ABCF72C-D80E-4F65-9866-26C6A1EEFB3E - ed1c6fd8603890ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOS.SearchViewController.didTapSearchButton() -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
