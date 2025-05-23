@@ -17,11 +17,14 @@ final class SearchViewController: UIViewController {
         return $0
     }(UIImageView())
 
-    private lazy var searchBar: UISearchBar = {
+    private lazy var searchBar: SearchTextField = {
         $0.delegate = self
-        $0.barTintColor = .mainYellow
+        $0.layer.cornerRadius = 4
+        $0.layer.masksToBounds = true
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.lightGray.cgColor
         return $0
-    }(UISearchBar())
+    }(SearchTextField())
 
     private lazy var searchButton: UIButton = {
         $0.setTitle(SearchStrings.searchButtonTitle.localized, for: .normal)
@@ -29,6 +32,12 @@ final class SearchViewController: UIViewController {
         $0.backgroundColor = .mainBlue
         $0.layer.cornerRadius = 4
         $0.layer.masksToBounds = true
+        $0.addTarget(
+            self,
+            action: #selector(didTapSearchButton),
+            for: .touchUpInside
+        )
+        $0.isEnabled = false
         return $0
     }(UIButton())
 
@@ -76,8 +85,8 @@ private extension SearchViewController {
             $0.height.equalTo(200)
         }
 
-        appLogoImageView.snp.makeConstraints {
-            $0.width.equalTo(150)
+        searchBar.snp.makeConstraints {
+            $0.height.equalTo(35)
         }
 
         searchButton.snp.makeConstraints { 
@@ -90,9 +99,16 @@ private extension SearchViewController {
         view.backgroundColor = .mainYellow
         title = SearchStrings.searchNavigationBarTitle.localized
     }
+
+    // MARK: - Objetive-C Methods
+    @objc
+    func didTapSearchButton() {
+        let viewController = ListingProductsFactory.makeSearchViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 // MARK: - UISearchBarDelegate
-extension SearchViewController: UISearchBarDelegate {
-    
+extension SearchViewController: UITextFieldDelegate {
+
 }

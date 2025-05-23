@@ -6,6 +6,7 @@ final class ListingProductsViewController: UIViewController {
     // MARK: - Initializers
     init() {
         super.init(nibName: nil, bundle: nil)
+        setupView()
     }
 
     required init?(coder: NSCoder) {
@@ -23,7 +24,7 @@ final class ListingProductsViewController: UIViewController {
 }
 
 // MARK: - Private Extension
-private extension ProductDetailViewController {
+private extension ListingProductsViewController {
     // MARK: Setup View
     func setupView() {
         buildViewHierarchy()
@@ -40,7 +41,8 @@ private extension ProductDetailViewController {
     }
 
     func additionalConfigurations() {
-
+        view.backgroundColor = .backgroundWhite
+        title = "Lista da Busca"
     }
 }
 

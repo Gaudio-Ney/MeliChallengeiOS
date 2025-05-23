@@ -13,8 +13,6 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
-					<key>UISceneClassName</key>
-					<string></string>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
@@ -28,7 +26,7 @@
 		<key>UIColorName</key>
 		<string>MainBlue</string>
 		<key>UIImageName</key>
-		<string>LogoMeli</string>
+		<string>MeliLogoImg</string>
 	</dict>
 </dict>
 </plist>

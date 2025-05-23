@@ -31,6 +31,7 @@
 		30BFFE902DDFDF1F0045AFC1 /* ListingProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFE8F2DDFDF1F0045AFC1 /* ListingProductsViewController.swift */; };
 		30BFFE922DDFDF480045AFC1 /* ListingProductsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFE912DDFDF480045AFC1 /* ListingProductsFactory.swift */; };
 		30BFFE942DDFDF7F0045AFC1 /* ListingProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFE932DDFDF7F0045AFC1 /* ListingProductViewModel.swift */; };
+		30BFFE972DDFE3C60045AFC1 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFE962DDFE3C60045AFC1 /* SearchTextField.swift */; };
 		30E62B422DDE9E2500DFD53F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E62B412DDE9E2500DFD53F /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		30BFFE8F2DDFDF1F0045AFC1 /* ListingProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingProductsViewController.swift; sourceTree = "<group>"; };
 		30BFFE912DDFDF480045AFC1 /* ListingProductsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingProductsFactory.swift; sourceTree = "<group>"; };
 		30BFFE932DDFDF7F0045AFC1 /* ListingProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingProductViewModel.swift; sourceTree = "<group>"; };
+		30BFFE962DDFE3C60045AFC1 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		30E62B412DDE9E2500DFD53F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 				300A6C8F2DDD701A00F93806 /* Application */,
 				30BFFE802DDFD0E70045AFC1 /* Localizables */,
 				300A6C902DDD702F00F93806 /* Resources */,
+				30BFFE952DDFE3A60045AFC1 /* UIComponents */,
 				300A6C912DDD705000F93806 /* Features */,
 				300A6CA82DDD7FDA00F93806 /* Network */,
 			);
@@ -261,6 +264,14 @@
 				30BFFE932DDFDF7F0045AFC1 /* ListingProductViewModel.swift */,
 			);
 			path = ListingProducts;
+			sourceTree = "<group>";
+		};
+		30BFFE952DDFE3A60045AFC1 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				30BFFE962DDFE3C60045AFC1 /* SearchTextField.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		30E62B432DDE9E2D00DFD53F /* Manager */ = {
@@ -420,6 +431,7 @@
 				30E62B422DDE9E2500DFD53F /* NetworkManager.swift in Sources */,
 				300A6C672DDD6FAF00F93806 /* MeliChallengeiOS.xcdatamodeld in Sources */,
 				300A6CA52DDD711F00F93806 /* ProductDetailFactory.swift in Sources */,
+				30BFFE972DDFE3C60045AFC1 /* SearchTextField.swift in Sources */,
 				30BFFE7F2DDFCDE80045AFC1 /* Constants.swift in Sources */,
 				300A6CA12DDD70EA00F93806 /* ProductDetailViewController.swift in Sources */,
 				300A6C9D2DDD70BB00F93806 /* SearchFactory.swift in Sources */,
@@ -607,7 +619,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeliChallengeiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -635,7 +647,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeliChallengeiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
