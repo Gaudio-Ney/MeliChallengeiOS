@@ -1,18 +1,26 @@
 import Foundation
 
 protocol ListingProductViewModelProtocol: AnyObject {
-    func getSearch()
+    var delegate: ListingProductViewModelDelegate? { get set }
+    func getProducts() -> [Product]
 }
 
 protocol ListingProductViewModelDelegate: AnyObject {
 
 }
 
-final class ListingProductViewModel {
+final class ListingProductViewModel: ListingProductViewModelProtocol {
     // MARK: - Properties
-    weak var delegate: ProductDetailViewModelDelegate?
-    // MARK: - Initializers
-    init() {
+    weak var delegate: ListingProductViewModelDelegate?
 
+    private let products: [Product]
+
+    // MARK: - Initializers
+    init(products: [Product]) {
+        self.products = products
+    }
+
+    func getProducts() -> [Product] {
+        products
     }
 }

@@ -1,7 +1,7 @@
 import Foundation
 
 struct SearchNickNameRequest: NetworkRequest {
-    typealias Response = SearchNickNameResponse
+    typealias Response = SearchProductNicknameResponse
 
     var path: String { "sites/MLB/domain_discovery/search" }
     var method: String { "GET" }

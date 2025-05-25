@@ -134,8 +134,6 @@ private extension SearchViewController {
     @objc
     func didTapSearchButton() {
         viewModel.getSearch(inputValue: searchBarTextField.text?.lowercased())
-        let viewController = ListingProductsFactory.makeSearchViewController()
-        navigationController?.pushViewController(viewController, animated: true)
     }
 
     @objc
@@ -146,6 +144,11 @@ private extension SearchViewController {
 
 // MARK: - SearchViewModelDelegate
 extension SearchViewController: SearchViewModelDelegate {
+    func updateCollectionViewWithResponse(products: [Product]) {
+        let viewController = ListingProductsFactory.makeListingViewController(products: products)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func showError() {
         UIAlert.showAlert(on: self, title: "Campo de busca faltante", message: "Preencha o campo de texto com o produto que deseja procurar.")
     }
@@ -163,6 +166,6 @@ extension SearchViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true;
+        return true
     }
 }

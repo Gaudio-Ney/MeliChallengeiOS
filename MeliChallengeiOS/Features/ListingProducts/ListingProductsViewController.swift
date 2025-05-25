@@ -1,10 +1,27 @@
 import UIKit
+import SnapKit
 
 final class ListingProductsViewController: UIViewController {
     // MARK: - Properties
+    private let viewModel: ListingProductViewModelProtocol
 
+    // MARK: - ViewComponents
+    private lazy var collectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        flowLayout.minimumLineSpacing = 4
+        flowLayout.minimumInteritemSpacing = 2
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.register(ListingProductsCell.self, forCellWithReuseIdentifier: ListingProductsCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .backgroundWhite
+        collectionView.showsVerticalScrollIndicator = false
+        return collectionView
+    }()
     // MARK: - Initializers
-    init() {
+    init(viewModel: ListingProductViewModelProtocol) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setupView()
     }
@@ -17,8 +34,6 @@ final class ListingProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    // MARK: - View Componentes
 
     // MARK: - Public Methods
 }
@@ -33,16 +48,74 @@ private extension ListingProductsViewController {
     }
 
     func buildViewHierarchy() {
-
+        view.addSubview(collectionView)
     }
 
     func setupConstraints() {
-
+        collectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 
     func additionalConfigurations() {
         view.backgroundColor = .backgroundWhite
         title = "Lista da Busca"
+        reloadCollectionView()
     }
+}
+
+// MARK: - Private Methods
+private extension ListingProductsViewController {
+    func reloadCollectionView() {
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+        }
+    }
+}
+
+// MARK: - UICollectionViewDelegate + UICollectionViewDataSource
+extension ListingProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        return viewModel.getProducts().count
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: ListingProductsCell.identifier,
+            for: indexPath) as? ListingProductsCell else {
+            return UICollectionViewCell()
+        }
+        let products = viewModel.getProducts()
+
+        guard indexPath.row < products.count else {
+            return UICollectionViewCell()
+        }
+
+        let cellProduct = products[indexPath.row]
+        cell.updateCellWith(cellProduct)
+        return cell
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        let width = self.collectionView.frame.width
+        let height = self.collectionView.frame.width / 3
+        return CGSize(width: width, height: height)
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension ListingProductsViewController: UICollectionViewDelegateFlowLayout {
+
 }
 

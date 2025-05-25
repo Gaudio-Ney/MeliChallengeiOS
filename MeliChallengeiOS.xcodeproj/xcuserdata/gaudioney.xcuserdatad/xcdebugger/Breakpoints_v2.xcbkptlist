@@ -7,129 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5FE2CD27-146E-4E81-AB10-ED46C5518654"
+            uuid = "677EF65E-7D30-4CED-9F55-45072736DF12"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MeliChallengeiOS/Network/Service/NetworkService.swift"
+            filePath = "MeliChallengeiOS/Features/ListingProducts/ListingProductsCell/ListingProductsCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "send(_:completion:)"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "setupCellUIComponents(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1C78D386-3B9C-492C-81A6-C0239B5EC52C"
+            uuid = "DDCDEBE8-B14C-414F-A8F8-2226EE9B2C6D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MeliChallengeiOS/Network/Service/NetworkService.swift"
+            filePath = "MeliChallengeiOS/Features/ListingProducts/ListingProductsCell/ListingProductsCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "send(_:completion:)"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "setupCellUIComponents(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7399F0B8-5492-4231-B9D3-58F6E190A260"
+            uuid = "5EAC4FE6-617D-430D-977D-4C5995169A17"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MeliChallengeiOS/Network/Service/NetworkService.swift"
+            filePath = "MeliChallengeiOS/Features/ListingProducts/ListingProductsCell/ListingProductsCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "send(_:completion:)"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "setupCellUIComponents(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7F72D047-9483-4A8A-830E-14E7A1627B75"
+            uuid = "14E594FD-0DAF-4929-9ED4-C8BEEDCDCE43"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MeliChallengeiOS/Network/Service/NetworkService.swift"
+            filePath = "MeliChallengeiOS/Features/ListingProducts/ListingProductsCell/ListingProductsCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "send(_:completion:)"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "setupCellUIComponents(with:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "487C3F69-F055-413D-A561-45F73126CFBC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MeliChallengeiOS/Network/Service/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "send(_:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "29A08BE1-67D4-45AA-A8E3-D1865997126E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MeliChallengeiOS/Network/Service/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "send(_:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "29A08BE1-67D4-45AA-A8E3-D1865997126E - f14fd18674f303ac"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MeliChallengeiOS.NetworkService.send&lt;&#x3c4;_0_0 where &#x3c4;_0_0: MeliChallengeiOS.NetworkRequest&gt;(_: &#x3c4;_0_0, completion: (Swift.Result&lt;&#x3c4;_0_0.Response, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MeliChallengeiOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Network/Service/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "3880">
-               </Location>
-               <Location
-                  uuid = "29A08BE1-67D4-45AA-A8E3-D1865997126E - 95462c3a8a768332"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MeliChallengeiOS.NetworkService.send&lt;&#x3c4;_0_0 where &#x3c4;_0_0: MeliChallengeiOS.NetworkRequest&gt;(_: &#x3c4;_0_0, completion: (Swift.Result&lt;&#x3c4;_0_0.Response, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MeliChallengeiOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Network/Service/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "416">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

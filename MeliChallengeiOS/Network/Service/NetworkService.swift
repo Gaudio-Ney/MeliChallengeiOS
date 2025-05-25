@@ -83,4 +83,28 @@ final class NetworkService {
 
         task.resume()
     }
+
+    func decodeSeachMock<T: NetworkRequest>(
+        _ request: T,
+        completion: @escaping (Result<T.Response, Error>
+        ) -> Void) {
+        guard let filePath = Bundle.main.path(forResource: "SearchResponseMock", ofType: "json") else {
+            completion(.failure(APIError.noDataError))
+            return
+        }
+        let fileUrl = URL(fileURLWithPath: filePath)
+
+        do {
+            guard let data = try? Data(contentsOf: fileUrl) else {
+                completion(.failure(APIError.noDataError))
+                return
+            }
+
+            let decoder = JSONDecoder()
+            let decoded = try decoder.decode(T.Response.self, from: data)
+            completion(.success(decoded))
+        } catch {
+            completion(.failure(APIError.noDataError))
+        }
+    }
 }

@@ -7,6 +7,7 @@ protocol SearchViewModelProtocol: AnyObject {
 
 protocol SearchViewModelDelegate: AnyObject {
     func showError()
+    func updateCollectionViewWithResponse(products: [Product])
 }
 
 final class SearchViewModel: SearchViewModelProtocol {
@@ -30,13 +31,21 @@ final class SearchViewModel: SearchViewModelProtocol {
 
 // MARK: - Private Methods
 private extension SearchViewModel {
-    func search(nickname: String) {
-        searchManager.search(nickname: nickname) { result in
-            switch result {
-                case .success(let success):
-                    print(success)
-                case .failure(let failure):
-                    print(failure)
+    func search(
+        nickname: String
+    ) {
+        searchManager.search(nickname: nickname, isMock: true) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                    case .success(let response):
+                        guard let products = response.products else {
+                            self?.delegate?.showError()
+                            return
+                        }
+                        self?.delegate?.updateCollectionViewWithResponse(products: products)
+                    case .failure(_):
+                        self?.delegate?.showError()
+                }
             }
         }
     }

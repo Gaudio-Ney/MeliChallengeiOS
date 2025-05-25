@@ -1,7 +1,9 @@
 struct ListingProductsFactory {
-    static func makeSearchViewController(
-    ) -> ProductDetailViewController {
-        let viewController = ProductDetailViewController()
+    static func makeListingViewController(
+        products: [Product]
+    ) -> ListingProductsViewController {
+        let viewModel = ListingProductViewModel(products: products)
+        let viewController = ListingProductsViewController(viewModel: viewModel)
         return viewController
     }
 }

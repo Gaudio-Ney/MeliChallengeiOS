@@ -10,8 +10,16 @@ final class SearchManager {
     }
 
     // MARK: - Public Methods
-    func search(nickname: String, completion: @escaping (Result<SearchNickNameResponse, Error>) -> Void) {
+    func search(
+        nickname: String,
+        isMock: Bool = false,
+        completion: @escaping (Result<SearchProductNicknameResponse, Error>
+        ) -> Void) {
         let request = SearchNickNameRequest(nickname: nickname)
-        networkService.send(request, completion: completion)
+        if isMock {
+            networkService.decodeSeachMock(request, completion: completion)
+        } else {
+            networkService.send(request, completion: completion)
+        }
     }
 }
