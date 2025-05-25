@@ -15,7 +15,8 @@ final class MainNavigationController: UINavigationController {
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
         UINavigationBar.appearance().compactAppearance = navigationBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-        navigationBar.tintColor = .clear
+        
+        navigationBar.tintColor = .mainBlue
         navigationBar.isTranslucent = false
     }
 }
