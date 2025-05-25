@@ -1,5 +1,6 @@
-import UIKit
+import Kingfisher
 import SnapKit
+import UIKit
 
 final class ListingProductsCell: UICollectionViewCell { 
     // MARK: - Properties
@@ -49,9 +50,7 @@ final class ListingProductsCell: UICollectionViewCell {
     }(UILabel())
 
     private lazy var imageView: UIImageView = {
-        $0.contentMode = .scaleAspectFit
-        $0.clipsToBounds = true
-        $0.backgroundColor = .lightGray
+        $0.backgroundColor = .white
         $0.layer.cornerRadius = 4
         $0.layer.masksToBounds = true
         return $0
@@ -138,6 +137,14 @@ private extension ListingProductsCell {
         if let quantity = product.quantity {
             quantityLabel.text = "Quantidade disponível: " + String(quantity)
         }
+        
+        let defaultImage = UIImagePlaceholder()
+        imageView.kf.setImage(
+            with: URL(string: product.imageURL ?? ""),
+            placeholder: defaultImage
+        )
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
     }
 }
 

@@ -13,4 +13,8 @@ extension UIImage {
     static var meliLogoImage: UIImage {
         return initialize(with: "MeliLogoImg")
     }
+
+    static var defaultProductNotFoundImage: UIImage {
+        return initialize(with: "DefaultProductNotFoundImage")
+    }
 }

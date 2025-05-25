@@ -93,7 +93,7 @@ private extension SearchViewController {
 
     func setupConstraints() {
         mainVerticalStack.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(200)
+            $0.center.equalToSuperview()
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.equalToSuperview().inset(16)
             $0.height.equalTo(200)

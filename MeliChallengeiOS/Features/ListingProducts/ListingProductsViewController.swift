@@ -108,9 +108,11 @@ extension ListingProductsViewController: UICollectionViewDelegate, UICollectionV
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        let width = self.collectionView.frame.width
-        let height = self.collectionView.frame.width / 3
-        return CGSize(width: width, height: height)
+        let size = CGSize(
+            width: self.collectionView.frame.width,
+            height: 200
+            )
+        return size
     }
 }
 
