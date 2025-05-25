@@ -20,31 +20,31 @@ final class ListingProductsCell: UICollectionViewCell {
 
     // MARK: - View Components
     private lazy var nameLabel: UILabel = {
-        $0.font = .systemFont(ofSize: 14, weight: .semibold)
+        $0.font = .systemFont(ofSize: 18, weight: .semibold)
         $0.numberOfLines = 3
         $0.textColor = .black
         return $0
     }(UILabel())
 
     private lazy var priceLabel: UILabel = {
-        $0.font = .systemFont(ofSize: 16, weight: .bold)
+        $0.font = .systemFont(ofSize: 24, weight: .bold)
         $0.numberOfLines = 0
         $0.textColor = .black
         return $0
     }(UILabel())
 
     private lazy var freeShippingLabel: UILabel = {
-        $0.font = .systemFont(ofSize: 12, weight: .regular)
+        $0.font = .systemFont(ofSize: 14, weight: .semibold)
         $0.numberOfLines = 1
         $0.text = "Envio frete grátis"
-        $0.textColor = .black
+        $0.textColor = .successGreen
         $0.isHidden = true
         return $0
     }(UILabel())
 
     private lazy var quantityLabel: UILabel = {
         $0.numberOfLines = 1
-        $0.font = .systemFont(ofSize: 12, weight: .regular)
+        $0.font = .systemFont(ofSize: 14, weight: .regular)
         $0.textColor = .black
         return $0
     }(UILabel())
@@ -128,8 +128,8 @@ private extension ListingProductsCell {
         }
 
         nameLabel.text = name
-        priceLabel.text = String(price)
-        
+        priceLabel.text = price.formatPrice()
+
         if let freeShipping = product.freeShipping {
             freeShippingLabel.isHidden = freeShipping ? false : true
         }

@@ -30,7 +30,7 @@ final class SearchViewController: UIViewController {
 
     private lazy var searchBarTextField: SearchTextField = {
         $0.delegate = self
-        $0.layer.cornerRadius = 4
+        $0.layer.cornerRadius = 18
         $0.layer.masksToBounds = true
         $0.layer.borderWidth = 1
         $0.layer.borderColor = UIColor.lightGray.cgColor
@@ -100,7 +100,7 @@ private extension SearchViewController {
         }
 
         searchBarTextField.snp.makeConstraints {
-            $0.height.equalTo(35)
+            $0.height.equalTo(36)
         }
 
         searchButton.snp.makeConstraints { 

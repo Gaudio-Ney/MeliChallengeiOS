@@ -53,7 +53,8 @@ private extension ListingProductsViewController {
 
     func setupConstraints() {
         collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalToSuperview().offset(8)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
 
