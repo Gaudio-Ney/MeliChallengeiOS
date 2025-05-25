@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen.storyboard</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>16.0.0</string>
 	<key>UIApplicationSceneManifest</key>
@@ -20,13 +22,6 @@
 				</dict>
 			</array>
 		</dict>
-	</dict>
-	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIColorName</key>
-		<string>MainBlue</string>
-		<key>UIImageName</key>
-		<string>MeliLogoImg</string>
 	</dict>
 </dict>
 </plist>
