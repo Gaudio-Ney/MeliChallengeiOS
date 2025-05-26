@@ -24,6 +24,7 @@ final class ListingProductsViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setupView()
+        viewModel.delegate = self
     }
 
     required init?(coder: NSCoder) {
@@ -73,6 +74,11 @@ private extension ListingProductsViewController {
     }
 }
 
+// MARK: - ListingProductsViewModelProtocol
+extension ListingProductsViewController: ListingProductViewModelDelegate {
+
+}
+
 // MARK: - UICollectionViewDelegate + UICollectionViewDataSource
 extension ListingProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -111,8 +117,20 @@ extension ListingProductsViewController: UICollectionViewDelegate, UICollectionV
         let size = CGSize(
             width: self.collectionView.frame.width,
             height: 200
-            )
+        )
         return size
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let products = viewModel.getProducts()
+
+        guard indexPath.row < products.count else {
+            return
+        }
+
+        let product = products[indexPath.row]
+        let viewController = ProductDetailFactory.makeSearchViewController(product: product)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
