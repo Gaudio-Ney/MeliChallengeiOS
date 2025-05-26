@@ -15,6 +15,8 @@ final class SearchViewModel: SearchViewModelProtocol {
     weak var delegate: SearchViewModelDelegate?
 
     private let searchManager: SearchManagerProtocol
+    private let tokenManager = TokenManagerBuilder.makeTokenManager()
+
     // MARK: - Initializers
     init(searchManager: SearchManagerProtocol) {
         self.searchManager = searchManager
@@ -47,6 +49,23 @@ private extension SearchViewModel {
                     case .failure(let error):
                         self?.delegate?.showError(error: error)
                 }
+            }
+        }
+    }
+
+    func getNewBearerToken(completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+        tokenManager.getAuthToken { result in
+            switch result {
+                case .success(let tokenResponse):
+                    guard let accessToken = tokenResponse.accessToken else {
+                        completion(.failure(APIError.noDataError))
+                        return
+                    }
+
+                    TokenDefaults.saveAuthToken(token: accessToken)
+                    Constants.ApiTokens.token = accessToken
+                case .failure(let error):
+                    completion(.failure(error))
             }
         }
     }

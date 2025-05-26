@@ -52,7 +52,7 @@ final class NetworkService {
 
         fullURL = fullURL.appending(queryItems: components.queryItems!)
 
-        guard let url = components.url else {
+        guard let _ = components.url else {
             return completion(.failure(APIError.urlError))
         }
 
@@ -65,6 +65,13 @@ final class NetworkService {
 
         let task = session.dataTask(with: urlRequest) { data, response, error in
             self.consoleLogger.logResponse(data: data, response: response, error: error)
+
+            if let urlResponse = response as? HTTPURLResponse {
+                if !(200...299).contains(urlResponse.statusCode) {
+                    return completion(.failure(NSError(domain: "", code: -1, userInfo: nil)))
+                }
+            }
+
             if let error = error {
                 return completion(.failure(error))
             }
