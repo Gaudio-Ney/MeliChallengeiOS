@@ -128,7 +128,7 @@ private extension SearchViewController {
     // MARK: - Objetive-C Methods
     @objc
     func didTapSearchButton() {
-        viewModel.getSearch(inputValue: searchBarTextField.text?.lowercased(), isMock: true)
+        viewModel.getSearch(inputValue: searchBarTextField.text?.lowercased(), isMock: false)
     }
 
     @objc 
@@ -146,10 +146,10 @@ extension SearchViewController: SearchViewModelDelegate {
     
     func showError(error: Error) {
         guard let erro = error as? APIError else {
-            UIAlert.showAlert(on: self, title: "Ops, um problema ocorreu", message: error.localizedDescription)
+            UIAlert.showAlert(on: self, title: SearchStrings.searchErroAlertTitle.localized, message: error.localizedDescription)
             return
         }
-        UIAlert.showAlert(on: self, title: "Ops, um problema ocorreu", message: erro.errorDescription)
+        UIAlert.showAlert(on: self, title: SearchStrings.searchErroAlertTitle.localized, message: erro.errorDescription)
     }
 }
 

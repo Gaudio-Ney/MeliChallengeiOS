@@ -9,6 +9,7 @@
 // MARK: - SearchStrings
 "SearchStrings_searchButtonTitle" = "Buscar";
 "SearchStrings_searchNavigationBarTitle" = "Busca de Produtos";
+"SearchStrings_searchErroAlertTitle" = "Ops, um problema ocorreu";
 
 // MARK: - MainNavigationStrings
 "MainNavigationStrings_backButtonTitle" = "Voltar";
@@ -24,3 +25,11 @@
 "ProductDetailStrings_detailNavigationBarTitle" = "Detalhe do Produto";
 "ProductDetailStrings_freeShippingTitle" = "Envio frete grátis";
 "ProductDetailStrings_productQuantityDescription" = "Quantidade disponível: ";
+
+// MARK: - APIErrorStrings
+"APIErrorStrings_urlError" = "Desculpe o transtorno. Houve falha na requisição. Por favor, tente novamente mais tarde.";
+"APIErrorStrings_notFound" = "Serviço não encontrado ou fora de atividade. Por favor, verifique sua conceção à internet ou tente novamente mais tarde.";
+"APIErrorStrings_badRequest" = "Erro ao enviar os dados para o Servidor, por favor, verifique as informações enviadas. Ou tente novamente mais tarde.";
+"APIErrorStrings_serverError" = "Serviço indisponível, por favor, tente novamente mais tarde.";
+"APIErrorStrings_noDataError" = "Nenhum dado encontrado para o serviço requisitado.";
+"APIErrorStrings_unknownError" = "Algo de errado aconteceu com os nossos serviços. Por favor, tente novamente mais tarde.";

@@ -9,6 +9,7 @@
 // MARK: - SearchStrings
 "SearchStrings_searchButtonTitle" = "Search";
 "SearchStrings_searchNavigationBarTitle" = "Product Search";
+"SearchStrings_searchErroAlertTitle" = "Oops, a problem occurred";
 
 // MARK: - MainNavigationStrings
 "MainNavigationStrings_backButtonTitle" = "Back";
@@ -24,3 +25,11 @@
 "ProductDetailStrings_detailNavigationBarTitle" = "Product Detail";
 "ProductDetailStrings_freeShippingTitle" = "Free shipping";
 "ProductDetailStrings_productQuantityDescription" = "Available quantity: ";
+
+// MARK: - APIErrorStrings
+"APIErrorStrings_urlError" = "Sorry for the inconvenience. The request failed. Please try again later.";
+"APIErrorStrings_notFound" = "Service not found or out of service. Please check your internet connection or try again later.";
+"APIErrorStrings_badRequest" = "Error sending data to Server, please check the information sent. Or try again later.";
+"APIErrorStrings_serverError" = "Service unavailable, please try again later.";
+"APIErrorStrings_noDataError" = "No data found for the requested service.";
+"APIErrorStrings_unknownError" = "Something went wrong with our services. Please try again later.";

@@ -10,18 +10,18 @@ enum APIError: Error {
 
     var errorDescription: String {
         switch self {
-        case .urlError:
-            return "Desculpe o transtorno. Houve falha na requisição. Por favor, tente novamente mais tarde."
-        case .notFound:
-            return "Serviço não encontrado ou fora de atividade. Por favor, verifique sua conceção à internet ou tente novamente mais tarde."
-        case .badRequest:
-            return "Erro ao enviar os dados para o Servidor, por favor, verifique as informações enviadas. Ou tente novamente mais tarde."
-        case .serverError:
-            return "Serviço indiponível, por favor, tente novamente mais tarde."
-        case .noDataError:
-            return "Nenhum dado encontrado para o serviço requisitado."
-        case .unknownError:
-            return "Algo de errado aconteceu com os nossos serviços. Por favor, tente novamente mais tarde."
+            case .urlError:
+                return APIErrorStrings.urlError.localized
+            case .notFound:
+                return APIErrorStrings.notFound.localized
+            case .badRequest:
+                return APIErrorStrings.badRequest.localized
+            case .serverError:
+                return APIErrorStrings.serverError.localized
+            case .noDataError:
+                return APIErrorStrings.noDataError.localized
+            case .unknownError:
+                return APIErrorStrings.unknownError.localized
         }
     }
 }
