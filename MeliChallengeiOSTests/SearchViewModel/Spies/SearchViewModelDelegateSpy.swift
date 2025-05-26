@@ -1,8 +1,25 @@
-//
-//  SearchViewModelDelegateSpy.swift
-//  MeliChallengeiOSTests
-//
-//  Created by Gáudio Ney on 26/05/25.
-//
+import XCTest
+@testable import MeliChallengeiOS
 
-import Foundation
+final class SearchViewModelDelegateSpy: SearchViewModelDelegate {
+    var expectation: XCTestExpectation?
+
+    private(set) var hasShowErrorCalled: Bool?
+    private(set) var hasUpdateCollectionViewWithResponse: Bool?
+
+    var delegate: SearchViewModelDelegate? {
+        didSet {
+            delegate?.updateCollectionViewWithResponse(products: [])
+        }
+    }
+
+    func showError() {
+        hasShowErrorCalled = true
+        expectation?.fulfill()
+    }
+    
+    func updateCollectionViewWithResponse(products: [MeliChallengeiOS.Product]) {
+        hasUpdateCollectionViewWithResponse = true
+        expectation?.fulfill()
+    }
+}

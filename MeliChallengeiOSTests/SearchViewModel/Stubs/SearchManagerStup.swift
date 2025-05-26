@@ -1,8 +1,17 @@
-//
-//  SearchManagerStup.swift
-//  MeliChallengeiOSTests
-//
-//  Created by Gáudio Ney on 26/05/25.
-//
+@testable import MeliChallengeiOS
 
-import Foundation
+final class SearchManagerStup: SearchManagerProtocol {
+    private let result: Result<MeliChallengeiOS.SearchProductNicknameResponse, Error>
+
+        init(searchResultMock: SearchProductNicknameResponse) {
+            self.result = .success(searchResultMock)
+        }
+
+        init(error: Error) {
+            self.result = .failure(error)
+        }
+
+    func search(nickname: String, isMock: Bool, completion: @escaping (Result<MeliChallengeiOS.SearchProductNicknameResponse, Error>) -> Void) {
+        completion(result)
+    }
+}

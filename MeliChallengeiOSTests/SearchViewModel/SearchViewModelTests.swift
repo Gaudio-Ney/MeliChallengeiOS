@@ -1,29 +1,62 @@
 import XCTest
 @testable import MeliChallengeiOS
 
-final class MeliChallengeiOSTests: XCTestCase {
+final class SearchViewModelTests: XCTestCase {
+    private var sut: SearchViewModel?
+    private var expectation : XCTestExpectation?
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
+        super.setUp()
+        let searchMangerStup = SearchManagerStup(searchResultMock: .searchResultMock)
+        let viewModel = SearchViewModel(searchManager: searchMangerStup)
+        sut = viewModel
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func testSuccessMockedSearch() throws {
+        let expectation = expectation(description: "Delegate should be called")
+        let delegateSpy = SearchViewModelDelegateSpy()
+        delegateSpy.expectation = expectation
+        sut?.delegate = delegateSpy
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        sut?.getSearch(inputValue: "Apple", isMock: true)
+
+        wait(for: [expectation], timeout: 1.5)
+
+        guard let hasUpdateUI = delegateSpy.hasUpdateCollectionViewWithResponse else {
+            XCTFail("Expected delegate to be called")
+            return
         }
+
+
+        XCTAssertTrue(hasUpdateUI, "Successfully update collectionViewList")
+        XCTAssertNil(delegateSpy.hasShowErrorCalled, "Error message correctly not seted")
     }
 
+    func testFailureMockedSearch() throws {
+        let searchMangerStup = SearchManagerStup(error: APIError.badRequest)
+        let viewModel = SearchViewModel(searchManager: searchMangerStup)
+        sut = viewModel
+        let expectation = expectation(description: "Delegate should be called")
+        let delegateSpy = SearchViewModelDelegateSpy()
+        delegateSpy.expectation = expectation
+        sut?.delegate = delegateSpy
+
+        sut?.getSearch(inputValue: "Apple", isMock: true)
+
+        wait(for: [expectation], timeout: 1.5)
+
+        guard let hasShowError = delegateSpy.hasShowErrorCalled else {
+            XCTFail("Expected delegate to be called")
+            return
+        }
+
+
+        XCTAssertTrue(hasShowError, "User feedback alert message successfully presented")
+        XCTAssertNil(delegateSpy.hasUpdateCollectionViewWithResponse, "UI correctly not updated due error message")
+    }
 }

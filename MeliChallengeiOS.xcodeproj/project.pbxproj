@@ -11,7 +11,7 @@
 		300A6C5F2DDD6FAF00F93806 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C5E2DDD6FAF00F93806 /* SceneDelegate.swift */; };
 		300A6C672DDD6FAF00F93806 /* MeliChallengeiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C652DDD6FAF00F93806 /* MeliChallengeiOS.xcdatamodeld */; };
 		300A6C692DDD6FAF00F93806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300A6C682DDD6FAF00F93806 /* Assets.xcassets */; };
-		300A6C772DDD6FB000F93806 /* MeliChallengeiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C762DDD6FB000F93806 /* MeliChallengeiOSTests.swift */; };
+		300A6C772DDD6FB000F93806 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C762DDD6FB000F93806 /* SearchViewModelTests.swift */; };
 		300A6C812DDD6FB000F93806 /* MeliChallengeiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C802DDD6FB000F93806 /* MeliChallengeiOSUITests.swift */; };
 		300A6C832DDD6FB000F93806 /* MeliChallengeiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C822DDD6FB000F93806 /* MeliChallengeiOSUITestsLaunchTests.swift */; };
 		300A6C962DDD708400F93806 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300A6C952DDD708400F93806 /* SearchViewController.swift */; };
@@ -47,6 +47,9 @@
 		30D269972DE491BF00C1542B /* ProductDetailStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D269962DE491BF00C1542B /* ProductDetailStrings.swift */; };
 		30D269992DE4921200C1542B /* MainNavigationStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D269982DE4921200C1542B /* MainNavigationStrings.swift */; };
 		30D2699B2DE4929100C1542B /* ListingProductsCellStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2699A2DE4929100C1542B /* ListingProductsCellStrings.swift */; };
+		30D269A02DE4ACDB00C1542B /* SearchManagerStup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2699F2DE4ACDB00C1542B /* SearchManagerStup.swift */; };
+		30D269A32DE4AE8500C1542B /* SearchResultMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D269A22DE4AE8500C1542B /* SearchResultMock.swift */; };
+		30D269A52DE4B01000C1542B /* SearchViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D269A42DE4B01000C1542B /* SearchViewModelDelegateSpy.swift */; };
 		30E511EF2DE3944F00485CF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E511EE2DE3944F00485CF5 /* LaunchScreen.storyboard */; };
 		30E511F42DE3971100485CF5 /* ListingProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E511F32DE3971100485CF5 /* ListingProductsCell.swift */; };
 		30E511F52DE3AA4700485CF5 /* SearchResponseMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 30E511F12DE3965F00485CF5 /* SearchResponseMock.json */; };
@@ -78,7 +81,7 @@
 		300A6C682DDD6FAF00F93806 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300A6C6D2DDD6FAF00F93806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		300A6C722DDD6FB000F93806 /* MeliChallengeiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliChallengeiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		300A6C762DDD6FB000F93806 /* MeliChallengeiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeiOSTests.swift; sourceTree = "<group>"; };
+		300A6C762DDD6FB000F93806 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		300A6C7C2DDD6FB000F93806 /* MeliChallengeiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliChallengeiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		300A6C802DDD6FB000F93806 /* MeliChallengeiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeiOSUITests.swift; sourceTree = "<group>"; };
 		300A6C822DDD6FB000F93806 /* MeliChallengeiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -114,6 +117,9 @@
 		30D269962DE491BF00C1542B /* ProductDetailStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailStrings.swift; sourceTree = "<group>"; };
 		30D269982DE4921200C1542B /* MainNavigationStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationStrings.swift; sourceTree = "<group>"; };
 		30D2699A2DE4929100C1542B /* ListingProductsCellStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingProductsCellStrings.swift; sourceTree = "<group>"; };
+		30D2699F2DE4ACDB00C1542B /* SearchManagerStup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManagerStup.swift; sourceTree = "<group>"; };
+		30D269A22DE4AE8500C1542B /* SearchResultMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMock.swift; sourceTree = "<group>"; };
+		30D269A42DE4B01000C1542B /* SearchViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelDelegateSpy.swift; sourceTree = "<group>"; };
 		30E511EE2DE3944F00485CF5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30E511F12DE3965F00485CF5 /* SearchResponseMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchResponseMock.json; sourceTree = "<group>"; };
 		30E511F32DE3971100485CF5 /* ListingProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingProductsCell.swift; sourceTree = "<group>"; };
@@ -186,7 +192,7 @@
 		300A6C752DDD6FB000F93806 /* MeliChallengeiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				300A6C762DDD6FB000F93806 /* MeliChallengeiOSTests.swift */,
+				30D2699E2DE4AABD00C1542B /* SearchViewModel */,
 			);
 			path = MeliChallengeiOSTests;
 			sourceTree = "<group>";
@@ -349,6 +355,41 @@
 				30BFFEAA2DE01CA40045AFC1 /* ConsoleLogger.swift */,
 			);
 			path = ConsoleLogger;
+			sourceTree = "<group>";
+		};
+		30D2699C2DE4AA9500C1542B /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				30D2699F2DE4ACDB00C1542B /* SearchManagerStup.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		30D2699D2DE4AAA600C1542B /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				30D269A42DE4B01000C1542B /* SearchViewModelDelegateSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		30D2699E2DE4AABD00C1542B /* SearchViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				300A6C762DDD6FB000F93806 /* SearchViewModelTests.swift */,
+				30D2699C2DE4AA9500C1542B /* Stubs */,
+				30D2699D2DE4AAA600C1542B /* Spies */,
+				30D269A12DE4AE7100C1542B /* Mocks */,
+			);
+			path = SearchViewModel;
+			sourceTree = "<group>";
+		};
+		30D269A12DE4AE7100C1542B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				30D269A22DE4AE8500C1542B /* SearchResultMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		30E511F02DE3963800485CF5 /* Mocks */ = {
@@ -559,7 +600,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				300A6C772DDD6FB000F93806 /* MeliChallengeiOSTests.swift in Sources */,
+				30D269A52DE4B01000C1542B /* SearchViewModelDelegateSpy.swift in Sources */,
+				300A6C772DDD6FB000F93806 /* SearchViewModelTests.swift in Sources */,
+				30D269A32DE4AE8500C1542B /* SearchResultMock.swift in Sources */,
+				30D269A02DE4ACDB00C1542B /* SearchManagerStup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

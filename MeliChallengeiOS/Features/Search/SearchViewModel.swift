@@ -2,7 +2,7 @@ import Foundation
 
 protocol SearchViewModelProtocol: AnyObject {
     var delegate: SearchViewModelDelegate? { get set }
-    func getSearch(inputValue: String?)
+    func getSearch(inputValue: String?, isMock: Bool)
 }
 
 protocol SearchViewModelDelegate: AnyObject {
@@ -14,27 +14,28 @@ final class SearchViewModel: SearchViewModelProtocol {
     // MARK: - Properties
     weak var delegate: SearchViewModelDelegate?
 
-    private let searchManager: SearchManager
+    private let searchManager: SearchManagerProtocol
     // MARK: - Initializers
-    init(searchManager: SearchManager) {
+    init(searchManager: SearchManagerProtocol) {
         self.searchManager = searchManager
     }
 
-    func getSearch(inputValue: String?) {
+    func getSearch(inputValue: String?, isMock: Bool) {
         guard let inputValue else {
             delegate?.showError()
             return
         }
-        search(nickname: inputValue)
+        search(nickname: inputValue, isMock: isMock)
     }
 }
 
 // MARK: - Private Methods
 private extension SearchViewModel {
     func search(
-        nickname: String
+        nickname: String,
+        isMock: Bool
     ) {
-        searchManager.search(nickname: nickname, isMock: true) { [weak self] result in
+        searchManager.search(nickname: nickname, isMock: isMock) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                     case .success(let response):

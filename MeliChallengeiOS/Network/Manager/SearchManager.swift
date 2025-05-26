@@ -1,6 +1,14 @@
 import Foundation
 
-final class SearchManager {
+protocol SearchManagerProtocol {
+    func search(
+        nickname: String,
+        isMock: Bool,
+        completion: @escaping (Result<SearchProductNicknameResponse, Error>) -> Void
+    )
+}
+
+final class SearchManager: SearchManagerProtocol {
     // MARK: - Properties
     private let networkService: NetworkService
 
@@ -12,9 +20,9 @@ final class SearchManager {
     // MARK: - Public Methods
     func search(
         nickname: String,
-        isMock: Bool = false,
-        completion: @escaping (Result<SearchProductNicknameResponse, Error>
-        ) -> Void) {
+        isMock: Bool,
+        completion: @escaping (Result<SearchProductNicknameResponse, Error>) -> Void
+    ) {
         let request = SearchNickNameRequest(nickname: nickname)
         if isMock {
             networkService.decodeSeachMock(request, completion: completion)

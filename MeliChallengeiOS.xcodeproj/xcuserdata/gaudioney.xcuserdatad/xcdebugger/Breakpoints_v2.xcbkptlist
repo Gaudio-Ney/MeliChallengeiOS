@@ -3,4 +3,198 @@
    uuid = "90E92A12-76F8-4CE3-94E5-62006BD8C718"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C97574D6-A898-4E7B-B32B-C55447A9E40E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOSTests/SearchViewModel/Spies/SearchViewModelDelegateSpy.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "showError()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C97574D6-A898-4E7B-B32B-C55447A9E40E - d1e2ee4bbceec8be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOSTests.SearchViewModelDelegateSpy.showError() -&gt; ()"
+                  moduleName = "MeliChallengeiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOSTests/SearchViewModel/Spies/SearchViewModelDelegateSpy.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "C97574D6-A898-4E7B-B32B-C55447A9E40E - d1e2ee4bbceec425"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOSTests.SearchViewModelDelegateSpy.showError() -&gt; ()"
+                  moduleName = "MeliChallengeiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOSTests/SearchViewModel/Spies/SearchViewModelDelegateSpy.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E225594C-6590-4251-A802-EE3FE8F1C960"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOSTests/SearchViewModel/Spies/SearchViewModelDelegateSpy.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "updateCollectionViewWithResponse(products:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E225594C-6590-4251-A802-EE3FE8F1C960 - 47eba0e87ef21065"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOSTests.SearchViewModelDelegateSpy.updateCollectionViewWithResponse(products: Swift.Array&lt;MeliChallengeiOS.Product&gt;) -&gt; ()"
+                  moduleName = "MeliChallengeiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOSTests/SearchViewModel/Spies/SearchViewModelDelegateSpy.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "E225594C-6590-4251-A802-EE3FE8F1C960 - 47eba0e87ef21dfe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOSTests.SearchViewModelDelegateSpy.updateCollectionViewWithResponse(products: Swift.Array&lt;MeliChallengeiOS.Product&gt;) -&gt; ()"
+                  moduleName = "MeliChallengeiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOSTests/SearchViewModel/Spies/SearchViewModelDelegateSpy.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69C6A318-9C79-4066-84BA-E76E1B30490B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getSearch(inputValue:isMock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30284961-DAB3-4177-B9C2-60CC276890DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getSearch(inputValue:isMock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0518313-990C-49C3-91F6-D7C82D29CA24"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "search(nickname:isMock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE3199A1-D5FB-4080-A7D0-57204B01C5DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "search(nickname:isMock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA590CDA-189E-412F-A3FD-E88A1AF582A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "search(nickname:isMock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E42B07D8-DF22-429F-9368-67F8D75A5BD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOSTests/SearchViewModel/Stubs/SearchManagerStup.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "search(nickname:isMock:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
