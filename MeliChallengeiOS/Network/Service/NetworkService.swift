@@ -11,17 +11,17 @@ enum APIError: Error {
     var errorDescription: String {
         switch self {
         case .urlError:
-            return "Não foi possível criar o objeto URL a partir da string fornecida."
+            return "Desculpe o transtorno. Houve falha na requisição. Por favor, tente novamente mais tarde."
         case .notFound:
-            return "Erro 404, serviço não encontrado."
+            return "Serviço não encontrado ou fora de atividade. Por favor, verifique sua conceção à internet ou tente novamente mais tarde."
         case .badRequest:
-            return "Erro ao enviar os dados para o Servidor."
+            return "Erro ao enviar os dados para o Servidor, por favor, verifique as informações enviadas. Ou tente novamente mais tarde."
         case .serverError:
-            return "Erro Interno do Servidor."
+            return "Serviço indiponível, por favor, tente novamente mais tarde."
         case .noDataError:
-            return "Nenhum dado enviado pelo Servidor."
+            return "Nenhum dado encontrado para o serviço requisitado."
         case .unknownError:
-            return "Algo de errado aconteceu."
+            return "Algo de errado aconteceu com os nossos serviços. Por favor, tente novamente mais tarde."
         }
     }
 }

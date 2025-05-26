@@ -6,7 +6,7 @@ protocol SearchViewModelProtocol: AnyObject {
 }
 
 protocol SearchViewModelDelegate: AnyObject {
-    func showError()
+    func showError(error: Error)
     func updateCollectionViewWithResponse(products: [Product])
 }
 
@@ -22,7 +22,7 @@ final class SearchViewModel: SearchViewModelProtocol {
 
     func getSearch(inputValue: String?, isMock: Bool) {
         guard let inputValue else {
-            delegate?.showError()
+            delegate?.showError(error: APIError.badRequest)
             return
         }
         search(nickname: inputValue, isMock: isMock)
@@ -40,12 +40,12 @@ private extension SearchViewModel {
                 switch result {
                     case .success(let response):
                         guard let products = response.products else {
-                            self?.delegate?.showError()
+                            self?.delegate?.showError(error: APIError.noDataError)
                             return
                         }
                         self?.delegate?.updateCollectionViewWithResponse(products: products)
-                    case .failure(_):
-                        self?.delegate?.showError()
+                    case .failure(let error):
+                        self?.delegate?.showError(error: error)
                 }
             }
         }

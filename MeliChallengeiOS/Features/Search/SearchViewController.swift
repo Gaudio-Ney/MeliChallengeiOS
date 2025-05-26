@@ -149,8 +149,12 @@ extension SearchViewController: SearchViewModelDelegate {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    func showError() {
-        UIAlert.showAlert(on: self, title: "Campo de busca faltante", message: "Preencha o campo de texto com o produto que deseja procurar.")
+    func showError(error: Error) {
+        guard let erro = error as? APIError else {
+            UIAlert.showAlert(on: self, title: "Ops, um problema ocorreu", message: error.localizedDescription)
+            return
+        }
+        UIAlert.showAlert(on: self, title: "Ops, um problema ocorreu", message: erro.errorDescription)
     }
 }
 

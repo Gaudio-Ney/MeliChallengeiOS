@@ -13,7 +13,7 @@ final class SearchViewModelDelegateSpy: SearchViewModelDelegate {
         }
     }
 
-    func showError() {
+    func showError(error: Error) {
         hasShowErrorCalled = true
         expectation?.fulfill()
     }
