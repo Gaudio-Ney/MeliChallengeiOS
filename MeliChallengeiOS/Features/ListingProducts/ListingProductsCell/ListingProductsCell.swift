@@ -111,6 +111,11 @@ private extension ListingProductsCell {
         imageView.snp.makeConstraints {
             $0.width.equalTo(150)
         }
+
+        informationalVerticalStack.snp.makeConstraints { 
+            $0.top.equalToSuperview().offset(12)
+            $0.bottom.equalToSuperview().inset(12)
+        }
     }
 
     func additionalConfigurations() {

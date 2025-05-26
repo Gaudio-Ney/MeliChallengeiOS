@@ -120,6 +120,7 @@ private extension SearchViewController {
         view.backgroundColor = .mainYellow
         title = SearchStrings.searchNavigationBarTitle.localized
         handleButtonStateDueTextInput(text: searchBarTextField.text)
+        addTapGestureToBackground()
     }
 }
 
@@ -130,6 +131,14 @@ private extension SearchViewController {
         searchButton.backgroundColor = searchButton.isEnabled ? .mainBlue : .secondaryBlue
     }
 
+    func addTapGestureToBackground() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard)
+        )
+        view.addGestureRecognizer(tap)
+    }
+
     // MARK: - Objetive-C Methods
     @objc
     func didTapSearchButton() {
@@ -138,6 +147,11 @@ private extension SearchViewController {
 
     @objc
     func didTapToolbarDoneButton() {
+        searchBarTextField.resignFirstResponder()
+    }
+
+    @objc 
+    func dismissKeyboard(){
         searchBarTextField.resignFirstResponder()
     }
 }
