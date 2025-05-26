@@ -36,7 +36,7 @@ final class ListingProductsCell: UICollectionViewCell {
     private lazy var freeShippingLabel: UILabel = {
         $0.font = .systemFont(ofSize: 14, weight: .semibold)
         $0.numberOfLines = 1
-        $0.text = "Envio frete grátis"
+        $0.text = ListingProductsCellStrings.freeShippingTitle.localized
         $0.textColor = .successGreen
         $0.isHidden = true
         return $0
@@ -135,7 +135,7 @@ private extension ListingProductsCell {
         }
 
         if let quantity = product.quantity {
-            quantityLabel.text = "Quantidade disponível: " + String(quantity)
+            quantityLabel.text = ListingProductsCellStrings.productQuantityDescription.localized + String(quantity)
         }
         
         let defaultImage = UIImagePlaceholder()

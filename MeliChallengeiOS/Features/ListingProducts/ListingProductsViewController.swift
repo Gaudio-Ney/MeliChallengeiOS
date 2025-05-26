@@ -61,7 +61,7 @@ private extension ListingProductsViewController {
 
     func additionalConfigurations() {
         view.backgroundColor = .backgroundWhite
-        title = "Lista da Busca"
+        title = ListingProductsStrings.listingProductsNavigationBarTitle.localized
     }
 }
 

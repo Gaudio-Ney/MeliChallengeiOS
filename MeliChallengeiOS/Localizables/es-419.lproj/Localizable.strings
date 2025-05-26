@@ -6,5 +6,21 @@
   
 */
 
+// MARK: - SearchStrings
 "SearchStrings_searchButtonTitle" = "Buscar";
 "SearchStrings_searchNavigationBarTitle" = "Búsqueda de productos";
+
+// MARK: - MainNavigationStrings
+"MainNavigationStrings_backButtonTitle" = "Volver";
+
+// MARK: - ListingProductsStrings
+"ListingProductsStrings_listingProductsNavigationBarTitle" = "Lista de productos";
+
+// MARK: - ListingProductsCellStrings
+"ListingProductsCellStrings_freeShippingTitle" = "Envío gratis";
+"ListingProductsCellStrings_productQuantityDescription" = "Cantidad disponible: ";
+
+// MARK: - ProductDetailStrings
+"ProductDetailStrings_detailNavigationBarTitle" = "Detalle del producto";
+"ProductDetailStrings_freeShippingTitle" = "Envío gratis";
+"ProductDetailStrings_productQuantityDescription" = "Cantidad disponible: ";

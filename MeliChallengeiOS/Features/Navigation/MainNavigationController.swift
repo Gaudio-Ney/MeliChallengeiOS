@@ -16,6 +16,7 @@ final class MainNavigationController: UINavigationController {
         UINavigationBar.appearance().compactAppearance = navigationBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
         
+        navigationBar.backItem?.title = MainNavigationStrings.backButtonTitle.localized
         navigationBar.tintColor = .mainBlue
         navigationBar.isTranslucent = false
     }

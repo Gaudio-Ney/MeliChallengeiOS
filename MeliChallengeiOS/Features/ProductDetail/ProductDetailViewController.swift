@@ -54,7 +54,7 @@ final class ProductDetailViewController: UIViewController {
     private lazy var freeShippingLabel: UILabel = {
         $0.font = .systemFont(ofSize: 14, weight: .semibold)
         $0.numberOfLines = 1
-        $0.text = "Envio frete grátis"
+        $0.text = ProductDetailStrings.freeShippingTitle.localized
         $0.textColor = .successGreen
         $0.isHidden = true
         return $0
@@ -121,7 +121,7 @@ private extension ProductDetailViewController {
 
     func additionalConfigurations() {
         view.backgroundColor = .white
-        title = "Detalhe do Produto"
+        title = ProductDetailStrings.detailNavigationBarTitle.localized
         let product = viewModel.getProduct()
         setupCellUIComponents(with: product)
     }
@@ -144,7 +144,7 @@ private extension ProductDetailViewController {
         }
 
         if let quantity = product.quantity {
-            quantityLabel.text = "Quantidade disponível: " + String(quantity)
+            quantityLabel.text = ProductDetailStrings.productQuantityDescription.localized + String(quantity)
         }
 
         let defaultImage = UIImagePlaceholder()

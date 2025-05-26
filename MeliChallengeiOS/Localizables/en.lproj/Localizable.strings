@@ -6,5 +6,21 @@
   
 */
 
+// MARK: - SearchStrings
 "SearchStrings_searchButtonTitle" = "Search";
 "SearchStrings_searchNavigationBarTitle" = "Product Search";
+
+// MARK: - MainNavigationStrings
+"MainNavigationStrings_backButtonTitle" = "Back";
+
+// MARK: - ListingProductsStrings
+"ListingProductsStrings_listingProductsNavigationBarTitle" = "Products List";
+
+// MARK: - ListingProductsCellStrings
+"ListingProductsCellStrings_freeShippingTitle" = "Free shipping";
+"ListingProductsCellStrings_productQuantityDescription" = "Available quantity: ";
+
+// MARK: - ProductDetailStrings
+"ProductDetailStrings_detailNavigationBarTitle" = "Product Detail";
+"ProductDetailStrings_freeShippingTitle" = "Free shipping";
+"ProductDetailStrings_productQuantityDescription" = "Available quantity: ";
