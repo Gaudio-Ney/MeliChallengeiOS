@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "name": "Smartphone Samsung Galaxy S21 FE 5G 128GB",
+      "price": 2599.90,
+      "free_shipping": true,
+      "quantity": 15,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_703888-MLU77107715778_062024-F.webp"
+    },
+    {
+      "name": "Notebook Lenovo Ideapad 3 Intel i5 8GB SSD 256GB",
+      "price": 2899.00,
+      "free_shipping": true,
+      "quantity": 7,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_942073-MLU77155449116_072024-F.webp"
+    },
+    {
+      "name": "Fone de Ouvido Bluetooth JBL Tune 510BT",
+      "price": 199.99,
+      "free_shipping": false,
+      "quantity": 30,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_962970-MLU77166977696_072024-F.webp"
+    },
+    {
+      "name": "Smartwatch Amazfit Bip U Pro GPS",
+      "price": 329.90,
+      "free_shipping": true,
+      "quantity": 12,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_959896-MLB83453596694_042025-F-amazfit-bip-6-global-smartwatch-tela-amoled-197-original.webp"
+    },
+    {
+      "name": "Console PlayStation 5 Sony Edição Padrão",
+      "price": 4299.00,
+      "free_shipping": false,
+      "quantity": 5,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_734074-MLU74992678324_032024-F.webp"
+    },
+    {
+      "name": "Tablet Apple iPad 9ª Geração 10.2 Wi-Fi 64GB",
+      "price": 2499.00,
+      "free_shipping": true,
+      "quantity": 10,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_742376-MLU76890015932_062024-F.webp"
+    },
+    {
+      "name": "Monitor LG 24' Full HD IPS HDMI",
+      "price": 899.90,
+      "free_shipping": true,
+      "quantity": 20,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_918887-MLA81977040103_012025-F.webp"
+    },
+    {
+      "name": "Mouse Gamer Redragon Cobra Chroma RGB",
+      "price": 139.90,
+      "free_shipping": false,
+      "quantity": 25,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_852288-MLU76355021040_052024-F.webp"
+    },
+    {
+      "name": "Teclado Mecânico Gamer Razer BlackWidow V3",
+      "price": 699.00,
+      "free_shipping": true,
+      "quantity": 8,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_745961-MLB69668072402_052023-F-teclado-razer-mecnico-blackwidow-v3-tenkey-switch-yellow-us.webp"
+    },
+    {
+      "name": "HD Externo Seagate 1TB USB 3.0",
+      "price": 349.00,
+      "free_shipping": false,
+      "quantity": 18,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_734353-MLA83756095955_042025-F.webp"
+    },
+    {
+      "name": "SSD Kingston A400 480GB SATA",
+      "price": 299.90,
+      "free_shipping": true,
+      "quantity": 22,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_603054-MLU72717454543_112023-F.webp"
+    },
+    {
+      "name": "Roteador TP-Link Archer C6 Dual Band",
+      "price": 249.99,
+      "free_shipping": true,
+      "quantity": 14,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_876930-MLB46881822010_072021-F-roteador-wireless-tp-link-archer-c6-ac1200-gigabit-1001000-wi-fi-dual-band-mu-mimo-1200-mbps.webp"
+    },
+    {
+      "name": "Câmera de Segurança Intelbras Full HD Wi-Fi",
+      "price": 199.90,
+      "free_shipping": false,
+      "quantity": 16,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_970297-MLA82484952518_022025-F.webp"
+    },
+    {
+      "name": "Impressora Multifuncional Epson EcoTank L3250",
+      "price": 1299.00,
+      "free_shipping": true,
+      "quantity": 6,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_984266-MLA48196101433_112021-F.webp"
+    },
+    {
+      "name": "Cadeira Gamer TGT Heron Preta e Azul",
+      "price": 899.00,
+      "free_shipping": true,
+      "quantity": 9,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_677502-MLU77675342012_072024-F.webp"
+    },
+    {
+      "name": "Processador AMD Ryzen 5 5600G",
+      "price": 849.00,
+      "free_shipping": true,
+      "quantity": 11,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_678776-MLU69974057671_062023-F.webp"
+    },
+    {
+      "name": "Placa de Vídeo Nvidia GeForce GTX 1660 Super",
+      "price": 1499.00,
+      "free_shipping": false,
+      "quantity": 3,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_728575-MLB83182692273_032025-F-placa-de-video-geforce-gtx-1660-super-6gb-galax.webp"
+    },
+    {
+      "name": "Cooler Master Hyper 212 Black Edition",
+      "price": 249.00,
+      "free_shipping": true,
+      "quantity": 13,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_664385-MLA79639108666_102024-F.webp"
+    },
+    {
+      "name": "Fonte Corsair 650W 80 Plus Bronze",
+      "price": 429.00,
+      "free_shipping": false,
+      "quantity": 10,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_726096-MLU77890292265_072024-F.webp"
+    },
+    {
+      "name": "Gabinete Gamer Redragon Grapple",
+      "price": 349.00,
+      "free_shipping": true,
+      "quantity": 17,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_686890-MLU75599297958_042024-F.webp"
+    }
+  ]
+}

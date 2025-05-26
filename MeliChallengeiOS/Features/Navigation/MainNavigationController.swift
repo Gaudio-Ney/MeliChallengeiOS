@@ -10,12 +10,14 @@ final class MainNavigationController: UINavigationController {
         super.viewDidLoad()
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithDefaultBackground()
-        navigationBarAppearance.backgroundColor = .clear
+        navigationBarAppearance.backgroundColor = .mainYellow
 
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
         UINavigationBar.appearance().compactAppearance = navigationBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-        navigationBar.tintColor = .clear
+        
+        navigationBar.backItem?.title = MainNavigationStrings.backButtonTitle.localized
+        navigationBar.tintColor = .mainBlue
         navigationBar.isTranslucent = false
     }
 }

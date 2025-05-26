@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  MeliChallengeiOS
+
+  Created by Gáudio Ney on 22/05/25.
+  
+*/
+
+// MARK: - SearchStrings
+"SearchStrings_searchButtonTitle" = "Buscar";
+"SearchStrings_searchNavigationBarTitle" = "Búsqueda de productos";
+"SearchStrings_searchErroAlertTitle" = "Ups, ocurrió un problema";
+
+// MARK: - MainNavigationStrings
+"MainNavigationStrings_backButtonTitle" = "Volver";
+
+// MARK: - ListingProductsStrings
+"ListingProductsStrings_listingProductsNavigationBarTitle" = "Lista de productos";
+
+// MARK: - ListingProductsCellStrings
+"ListingProductsCellStrings_freeShippingTitle" = "Envío gratis";
+"ListingProductsCellStrings_productQuantityDescription" = "Cantidad disponible: ";
+
+// MARK: - ProductDetailStrings
+"ProductDetailStrings_detailNavigationBarTitle" = "Detalle del producto";
+"ProductDetailStrings_freeShippingTitle" = "Envío gratis";
+"ProductDetailStrings_productQuantityDescription" = "Cantidad disponible: ";
+
+// MARK: - APIErrorStrings
+"APIErrorStrings_urlError" = "Lo siento por los inconvenientes ocasionados. La solicitud falló. Por favor, inténtelo de nuevo más tarde.";
+"APIErrorStrings_notFound" = "Servicio no encontrado o fuera de servicio. Por favor verifique su conexión a Internet o inténtelo nuevamente más tarde.";
+"APIErrorStrings_badRequest" = "Error al enviar datos al Servidor, por favor revisar la información enviada. O inténtalo de nuevo más tarde.";
+"APIErrorStrings_serverError" = "Servicio no disponible, inténtelo nuevamente más tarde.";
+"APIErrorStrings_noDataError" = "No se encontraron datos para el servicio solicitado.";
+"APIErrorStrings_unknownError" = "Algo salió mal con nuestros servicios. Por favor, inténtelo de nuevo más tarde.";
