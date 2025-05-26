@@ -50,6 +50,38 @@
             endingLineNumber = "27"
             landmarkName = "getSearch(inputValue:isMock:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A3477DA0-282A-4400-96E7-83713270F8E7 - 15e805309e173a77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOS.SearchViewModel.getSearch(inputValue: Swift.Optional&lt;Swift.String&gt;, isMock: Swift.Bool) -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "A3477DA0-282A-4400-96E7-83713270F8E7 - 15e805309e173a18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeliChallengeiOS.SearchViewModel.getSearch(inputValue: Swift.Optional&lt;Swift.String&gt;, isMock: Swift.Bool) -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "228">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -66,6 +98,38 @@
             endingLineNumber = "45"
             landmarkName = "search(nickname:isMock:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "21306BFA-737F-4C5A-96A2-D7B29B28A744 - 32343bc7b537d84f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;MeliChallengeiOS.SearchProductNicknameResponse, Swift.Error&gt;) -&gt; () in MeliChallengeiOS.SearchViewModel.search(nickname: Swift.String, isMock: Swift.Bool) -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "21306BFA-737F-4C5A-96A2-D7B29B28A744 - 32343bc7b537d8ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;MeliChallengeiOS.SearchProductNicknameResponse, Swift.Error&gt;) -&gt; () in MeliChallengeiOS.SearchViewModel.search(nickname: Swift.String, isMock: Swift.Bool) -&gt; ()"
+                  moduleName = "MeliChallengeiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gaudioney/Documents/Repository/MeliChallengeiOS/MeliChallengeiOS/Features/Search/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -146,6 +210,22 @@
             endingLineNumber = "10"
             landmarkName = "attachHeaders(to:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E9A59C7-91BE-4934-8C6B-919EACC05FE9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeliChallengeiOS/Localizables/SearchStrings.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "localized"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

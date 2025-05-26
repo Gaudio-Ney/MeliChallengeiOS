@@ -5,6 +5,10 @@ final class SearchViewController: UIViewController {
     // MARK: - Properties
     let viewModel: SearchViewModelProtocol
 
+    private var screenWidth: Int {
+        Int(view.window?.windowScene?.screen.bounds.size.width ?? 0)
+    }
+
     // MARK: - View Components
     private lazy var mainVerticalStack: UIStackView = {
         $0.axis = .vertical
@@ -17,16 +21,6 @@ final class SearchViewController: UIViewController {
         $0.contentMode = .scaleAspectFit
         return $0
     }(UIImageView())
-
-    private lazy var doneButton: UIBarButtonItem = {
-        return $0
-    }(UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapToolbarDoneButton)))
-
-    private lazy var toolbarView: UIToolbar = {
-        $0.items?.append(doneButton)
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        return $0
-    }(UIToolbar())
 
     private lazy var searchBarTextField: SearchTextField = {
         $0.delegate = self
@@ -88,7 +82,6 @@ private extension SearchViewController {
         mainVerticalStack.addArrangedSubview(appLogoImageView)
         mainVerticalStack.addArrangedSubview(searchBarTextField)
         mainVerticalStack.addArrangedSubview(searchButton)
-        view.addSubview(toolbarView)
     }
 
     func setupConstraints() {
@@ -106,13 +99,6 @@ private extension SearchViewController {
         searchButton.snp.makeConstraints { 
             $0.width.equalTo(mainVerticalStack.snp.width)
             $0.height.equalTo(45)
-        }
-
-        toolbarView.snp.makeConstraints {
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview()
-            $0.height.equalTo(44)
         }
     }
 
@@ -143,11 +129,6 @@ private extension SearchViewController {
     @objc
     func didTapSearchButton() {
         viewModel.getSearch(inputValue: searchBarTextField.text?.lowercased(), isMock: true)
-    }
-
-    @objc
-    func didTapToolbarDoneButton() {
-        searchBarTextField.resignFirstResponder()
     }
 
     @objc 
