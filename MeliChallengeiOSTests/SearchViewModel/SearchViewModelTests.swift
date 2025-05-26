@@ -1,10 +1,3 @@
-//
-//  MeliChallengeiOSTests.swift
-//  MeliChallengeiOSTests
-//
-//  Created by Gáudio Ney on 20/05/25.
-//
-
 import XCTest
 @testable import MeliChallengeiOS
 
