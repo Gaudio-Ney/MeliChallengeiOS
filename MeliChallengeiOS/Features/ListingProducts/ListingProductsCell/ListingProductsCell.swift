@@ -114,7 +114,7 @@ private extension ListingProductsCell {
     }
 
     func additionalConfigurations() {
-        backgroundColor = .backgroundWhite
+        backgroundColor = .white
     }
 }
 

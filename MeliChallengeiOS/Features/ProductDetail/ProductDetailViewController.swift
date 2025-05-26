@@ -103,13 +103,14 @@ private extension ProductDetailViewController {
     func setupConstraints() {
         mainScrollView.snp.makeConstraints { 
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.equalToSuperview().offset(16)
+            $0.trailing.equalToSuperview().inset(16)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
 
         mainVerticalStack.snp.makeConstraints {
             $0.top.equalToSuperview().offset(16)
-            $0.width.equalTo(view.snp.width)
+            $0.width.equalTo(view.bounds.width - 32)
             $0.bottom.equalToSuperview().inset(16)
         }
 
@@ -119,7 +120,8 @@ private extension ProductDetailViewController {
     }
 
     func additionalConfigurations() {
-        view.backgroundColor = .backgroundWhite
+        view.backgroundColor = .white
+        title = "Detalhe do Produto"
         let product = viewModel.getProduct()
         setupCellUIComponents(with: product)
     }
