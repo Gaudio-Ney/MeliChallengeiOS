@@ -29,4 +29,12 @@ extension SearchProductNicknameResponse {
             )
         ]
     }
+
+    static var productsNilResultMock: [Product]? {
+        return nil
+    }
+
+    static var searchResultNilMock: SearchProductNicknameResponse {
+        return SearchProductNicknameResponse(products: productsNilResultMock)
+    }
 }

@@ -1,6 +1,6 @@
 @testable import MeliChallengeiOS
 
-final class SearchManagerStup: SearchManagerProtocol {
+final class SearchManagerStub: SearchManagerProtocol {
     private let result: Result<MeliChallengeiOS.SearchProductNicknameResponse, Error>
 
         init(searchResultMock: SearchProductNicknameResponse) {
@@ -11,7 +11,11 @@ final class SearchManagerStup: SearchManagerProtocol {
             self.result = .failure(error)
         }
 
-    func search(nickname: String, isMock: Bool, completion: @escaping (Result<MeliChallengeiOS.SearchProductNicknameResponse, Error>) -> Void) {
+    func search(
+        nickname: String,
+        isMock: Bool,
+        completion: @escaping (Result<MeliChallengeiOS.SearchProductNicknameResponse, Error>) -> Void
+    ) {
         completion(result)
     }
 }

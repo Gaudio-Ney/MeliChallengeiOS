@@ -7,7 +7,7 @@ final class SearchViewModelTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        let searchMangerStup = SearchManagerStup(searchResultMock: .searchResultMock)
+        let searchMangerStup = SearchManagerStub(searchResultMock: .searchResultMock)
         let viewModel = SearchViewModel(searchManager: searchMangerStup)
         sut = viewModel
     }
@@ -32,13 +32,12 @@ final class SearchViewModelTests: XCTestCase {
             return
         }
 
-
         XCTAssertTrue(hasUpdateUI, "Successfully update collectionViewList")
         XCTAssertNil(delegateSpy.hasShowErrorCalled, "Error message correctly not seted")
     }
 
     func testFailureMockedSearch() throws {
-        let searchMangerStup = SearchManagerStup(error: APIError.badRequest)
+        let searchMangerStup = SearchManagerStub(error: APIError.badRequest)
         let viewModel = SearchViewModel(searchManager: searchMangerStup)
         sut = viewModel
         let expectation = expectation(description: "Delegate should be called")
@@ -55,6 +54,46 @@ final class SearchViewModelTests: XCTestCase {
             return
         }
 
+        XCTAssertTrue(hasShowError, "User feedback alert message successfully presented")
+        XCTAssertNil(delegateSpy.hasUpdateCollectionViewWithResponse, "UI correctly not updated due error message")
+    }
+
+    func testFailureNilNickNameMockedSearch() throws {
+        let expectation = expectation(description: "Delegate should be called")
+        let delegateSpy = SearchViewModelDelegateSpy()
+        delegateSpy.expectation = expectation
+        sut?.delegate = delegateSpy
+
+        sut?.getSearch(inputValue: nil, isMock: true)
+
+        wait(for: [expectation], timeout: 1.5)
+
+        guard let hasShowError = delegateSpy.hasShowErrorCalled else {
+            XCTFail("Expected delegate to be called")
+            return
+        }
+
+        XCTAssertTrue(hasShowError, "User feedback alert message successfully presented")
+        XCTAssertNil(delegateSpy.hasUpdateCollectionViewWithResponse, "UI correctly not updated due error message")
+    }
+
+    func testFailureNilResponseMockedSearch() throws {
+        let searchMangerStup = SearchManagerStub(searchResultMock: .searchResultNilMock)
+        let viewModel = SearchViewModel(searchManager: searchMangerStup)
+        sut = viewModel
+        let expectation = expectation(description: "Delegate should be called")
+        let delegateSpy = SearchViewModelDelegateSpy()
+        delegateSpy.expectation = expectation
+        sut?.delegate = delegateSpy
+
+        sut?.getSearch(inputValue: "Apple", isMock: true)
+
+        wait(for: [expectation], timeout: 1.5)
+
+        guard let hasShowError = delegateSpy.hasShowErrorCalled else {
+            XCTFail("Expected delegate to be called")
+            return
+        }
 
         XCTAssertTrue(hasShowError, "User feedback alert message successfully presented")
         XCTAssertNil(delegateSpy.hasUpdateCollectionViewWithResponse, "UI correctly not updated due error message")
