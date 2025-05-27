@@ -128,7 +128,7 @@ private extension SearchViewController {
     // MARK: - Objetive-C Methods
     @objc
     func didTapSearchButton() {
-        viewModel.getSearch(inputValue: searchBarTextField.text?.lowercased(), isMock: false)
+        viewModel.getSearch(inputValue: searchBarTextField.text?.lowercased(), isMock: true)
     }
 
     @objc 
